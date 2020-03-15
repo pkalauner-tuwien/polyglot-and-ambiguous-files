@@ -32,6 +32,10 @@ else:
 
 try:
     with open(sys.argv[2 + offset], 'r') as js, open(sys.argv[3 + offset], 'w') as out:
+        # Check filename extension of out file
+        if out.name[out.name.rfind('.'):] != '.svg':
+            print("Warning: Filename extension of output file should probably be '.svg'.")
+        
         js_content = js.read()
         # Add script tag if not already present in JS file
         if "<script>" not in js_content:
