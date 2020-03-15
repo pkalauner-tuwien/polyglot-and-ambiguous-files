@@ -24,6 +24,12 @@ ZIP-PDF
 python3 appendFile.py ../input/ZIP/txt_files.zip ../input/PDF/hello.pdf ../output/zip_pdf.pdf.zip
 ```
 
+PDF-JAR
+
+```
+python3 appendFile.py ../input/PDF/hello.pdf ../input/JAR/hello.jar ../output/pdf_jar.jar.pdf
+```
+
 JS-JAVA
 
 ```
