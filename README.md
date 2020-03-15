@@ -13,11 +13,19 @@ python3 createSVG_JS.py ../input/SVG/svg_logo.svg ../input/JS/alert.js ../output
 ```
 
 PDF-ZIP
+
 ```
 python3 appendFile.py ../input/PDF/hello.pdf ../input/ZIP/txt_files.zip ../output/pdf_zip.zip.pdf
 ```
 
 ZIP-PDF
+
 ```
 python3 appendFile.py ../input/ZIP/txt_files.zip ../input/PDF/hello.pdf ../output/zip_pdf.pdf.zip
+```
+
+JS-JAVA
+
+```
+python3 createJS_JAVA.py ../input/JS/alert.js ../input/JAVA/Hello.java ../output/Hello.java.html
 ```
