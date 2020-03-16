@@ -30,6 +30,12 @@ PDF-JAR
 python3 appendFile.py ../input/PDF/hello.pdf ../input/JAR/hello.jar ../output/pdf_jar.jar.pdf
 ```
 
+GIF-PHP
+
+```
+python3 appendFile.py ../input/GIF/hello.gif ../input/PHP/hello.php ../output/gif_php.php.gif
+```
+
 JS-JAVA
 
 ```
