@@ -9,7 +9,7 @@ This repository contains various polyglot and ambiguous files created as part of
 SVG-JS
 
 ```
-python3 createSVG_JS.py ../input/SVG/svg_logo.svg ../input/JS/alert.js ../output/svg_js.svg
+python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/alert.js ../output/svg_js.svg
 ```
 
 PDF-ZIP
