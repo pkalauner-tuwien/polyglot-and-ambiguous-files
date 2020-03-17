@@ -6,12 +6,6 @@ This repository contains various polyglot and ambiguous files created as part of
 
 ### Polyglots
 
-SVG-JS
-
-```
-python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/alert.js ../output/svg_js.svg
-```
-
 PDF-ZIP
 
 ```
@@ -40,4 +34,10 @@ JS-JAVA
 
 ```
 python3 createJS_JAVA.py ../input/JS/alert.js ../input/JAVA/Hello.java ../output/Hello.java.html
+```
+
+SVG-JS
+
+```
+python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/alert.js ../output/svg_js.svg
 ```
