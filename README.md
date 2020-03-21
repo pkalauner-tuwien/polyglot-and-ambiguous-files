@@ -41,3 +41,11 @@ SVG-JS
 ```
 python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/alert.js ../output/svg_js.svg
 ```
+
+### Ambiguous files
+
+PDF
+
+```
+python3 createAmbiguousPDF.py ../input/JPEG/red.jpg ../input/JPEG/green.jpg ../input/JPEG/blue.jpg ../output/three_images.pdf
+```
