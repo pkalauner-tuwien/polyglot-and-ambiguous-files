@@ -44,7 +44,13 @@ python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/alert.js ../output/sv
 
 ### Ambiguous files
 
-PDF
+PDF (two images in one PDF)
+
+```
+python3 createAmbiguousPDF.py ../input/JPEG/red.jpg ../input/JPEG/green.jpg ../output/two_images.pdf
+```
+
+PDF (three images in one PDF)
 
 ```
 python3 createAmbiguousPDF.py ../input/JPEG/red.jpg ../input/JPEG/green.jpg ../input/JPEG/blue.jpg ../output/three_images.pdf
