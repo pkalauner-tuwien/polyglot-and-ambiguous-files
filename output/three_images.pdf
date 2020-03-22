@@ -169,10 +169,10 @@ endstream
 endobj 
 
 % Standard trailer
-trailer<</Root 2 0 R>>
+trailer<</Root 1 0 R>>
 
 % Commented trailer
-% trailer<</Root 1 0 R>>
+% trailer<</Root 2 0 R>>
 
 % Trailer without keyword
 <</Root 3 0 R>>
