@@ -22,7 +22,7 @@ else:
     sys.exit("Usage: python3 createAmbiguousPDF.py <Image 1> <Image 2> [Image 3] <Output file>")
 
 try:
-    with open(sys.argv[1], 'rb') as img1, open(sys.argv[2], 'rb') as img2, open(sys.argv[4 + offset], 'w') as out, open("files/ambiguous_template.pdf") as template:
+    with open(sys.argv[1], 'rb') as img1, open(sys.argv[2], 'rb') as img2, open(sys.argv[4 + offset], 'w') as out, open("files/three_images_template.pdf") as template:
         # Check filename extension of out file
         if out.name[out.name.rfind('.'):] != '.pdf':
             print("Warning: Filename extension of output file should probably be '.pdf'.")

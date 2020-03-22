@@ -1,6 +1,9 @@
 %PDF-1.4
 
-2 0 obj
+% Adapted from PoCs by A. Albertini and G. Coldwind
+% https://gynvael.coldwind.pl/?id=539
+
+1 0 obj
 <<
     /Pages 22 0 R
 >>
@@ -56,7 +59,7 @@ ffd8ffe000104a46494600010100004800480000ffe1004c4578696600004d4d002a000000080001
 endstream
 endobj
 
-1 0 obj
+2 0 obj
 <<
     /Pages 12 0 R
 >>
@@ -111,6 +114,11 @@ ffd8ffe000104a46494600010100004800480000ffe100be4578696600004d4d002a000000080006
 endstream
 endobj
 
+3 0 obj
+<<
+    /Pages 32 0 R
+>>
+endobj
 
 32 0 obj
 <<
@@ -160,11 +168,11 @@ ffd8ffe000104a46494600010100004800480000ffe1004c4578696600004d4d002a000000080001
 endstream
 endobj 
 
-% chrome trailer (commented)
-% trailer<</Root 2 0 R>>
+% Standard trailer
+trailer<</Root 2 0 R>>
 
-% adobe trailer (normal)
-trailer<</Root<</Pages 12 0 R>>>>
+% Commented trailer
+% trailer<</Root 1 0 R>>
 
-% sumatra trailer (no keyword)
-<</Root<</Pages 32 0 R>>>>
+% Trailer without keyword
+<</Root 3 0 R>>
