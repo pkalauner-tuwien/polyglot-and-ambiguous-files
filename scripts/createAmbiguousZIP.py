@@ -42,7 +42,7 @@ if len(sys.argv) != 6:
     print("Usage: python3 createAmbiguousPDF.py <File 1> <File 2> <File 3> <File 4> <Output file>")
     sys.exit("Files must not be ZIP files. Use '-' to use placeholder file.")
 
-# Zip specified files
+# Create ZIPs out of specified files
 tmpdir = tempfile.gettempdir()
 zip_paths = []
 for i in range(4):
@@ -106,5 +106,6 @@ try:
 except FileNotFoundError:
     sys.exit("Error: One or more files could not be opened.")
 
+# Remove created ZIP files
 for f in zip_paths:
     os.remove(f)
