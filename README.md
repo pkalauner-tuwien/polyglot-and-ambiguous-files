@@ -4,6 +4,8 @@ This repository contains various polyglot and ambiguous files created as part of
 
 ## Usage
 
+This section describes which commands have to be executed to produce the files present in the `output/` directory.
+
 ### Polyglots
 
 PDF-ZIP
