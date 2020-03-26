@@ -108,4 +108,5 @@ except FileNotFoundError:
 
 # Remove created ZIP files
 for f in zip_paths:
-    os.remove(f)
+    if f != PLACEHOLDER_ZIP:
+        os.remove(f)
