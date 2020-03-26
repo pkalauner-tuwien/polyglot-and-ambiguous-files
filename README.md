@@ -55,3 +55,9 @@ PDF (three images in one PDF)
 ```
 python3 createAmbiguousPDF.py ../input/JPEG/red.jpg ../input/JPEG/green.jpg ../input/JPEG/blue.jpg ../output/three_images.pdf
 ```
+
+ZIP
+
+```
+python3 createAmbiguousZIP.py ../input/TXT/file1.txt ../input/TXT/file2.txt ../input/TXT/file3.txt ../input/TXT/file4.txt ../output/four_zips.zip
+```
