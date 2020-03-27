@@ -11,10 +11,11 @@
 ##################################################
 
 import sys
+import os
 
 if len(sys.argv) == 3:
     print("No SVG File given, using default file.")
-    svg_path =  "files/default.svg"
+    svg_path =  os.path.join(sys.path[0], "files/default.svg")
     offset = -1
 elif len(sys.argv) == 4:
     svg_path = sys.argv[1]

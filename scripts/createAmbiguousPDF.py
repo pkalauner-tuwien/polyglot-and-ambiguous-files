@@ -14,15 +14,16 @@
 ##################################################
 
 import sys
+import os
 import binascii
 from PIL import Image
 
 if len(sys.argv) == 4:
     offset = -1
-    template_path = "files/two_images_template.pdf"
+    template_path = os.path.join(sys.path[0], "files/two_images_template.pdf")
 elif len(sys.argv) == 5:
     offset = 0
-    template_path = "files/three_images_template.pdf"
+    template_path = os.path.join(sys.path[0], "files/three_images_template.pdf")
 else:
     sys.exit("Usage: python3 createAmbiguousPDF.py <Image 1> <Image 2> [Image 3] <Output file>")
 

@@ -31,7 +31,7 @@ def to_hex_bytes(number):
     return binascii.unhexlify(number_str)[::-1]
 
 
-PLACEHOLDER_ZIP = "files/placeholder.zip"
+PLACEHOLDER_ZIP = os.path.join(sys.path[0], "files/placeholder.zip")
 STRUCTURE_BREAKER = b"--- STRUCTURE BREAKER ---"
 
 FILE_CD = binascii.unhexlify("504b0102")
