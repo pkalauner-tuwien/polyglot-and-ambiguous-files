@@ -15,6 +15,7 @@
 
 import sys
 import binascii
+from PIL import Image
 
 if len(sys.argv) == 4:
     offset = -1
@@ -31,13 +32,28 @@ try:
         if out.name[out.name.rfind('.'):] != '.pdf':
             print("Warning: Filename extension of output file should probably be '.pdf'.")
 
+
         template_content = template.read()
+
         template_content = template_content.replace("% [IMAGE1]", binascii.hexlify(img1.read()).decode())
+        img1.seek(0)
+        width, height = Image.open(img1).size
+        template_content = template_content.replace("[IMAGE1_WIDTH]", str(width))
+        template_content = template_content.replace("[IMAGE1_HEIGHT]", str(height))
+
         template_content = template_content.replace("% [IMAGE2]", binascii.hexlify(img2.read()).decode())
+        img2.seek(0)
+        width, height = Image.open(img2).size
+        template_content = template_content.replace("[IMAGE2_WIDTH]", str(width))
+        template_content = template_content.replace("[IMAGE2_HEIGHT]", str(height))
 
         if offset == 0:
             with open(sys.argv[3], 'rb') as img3:
                 template_content = template_content.replace("% [IMAGE3]", binascii.hexlify(img3.read()).decode())
+                img3.seek(0)
+                width, height = Image.open(img3).size
+                template_content = template_content.replace("[IMAGE3_WIDTH]", str(width))
+                template_content = template_content.replace("[IMAGE3_HEIGHT]", str(height))
 
         out.write(template_content)
 except FileNotFoundError:

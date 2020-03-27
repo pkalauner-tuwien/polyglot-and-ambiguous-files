@@ -22,7 +22,7 @@ endobj
 <<
     /Type /Page
     /Parent 22 0 R
-    /MediaBox [0 0 350 400]
+    /MediaBox [0 0 [IMAGE1_WIDTH] [IMAGE1_HEIGHT]]
     /Contents 24 0 R
     /Resources
     <<
@@ -36,7 +36,7 @@ endobj
 <<>>
 stream
 q
-350 0 0 400 0 0 cm
+[IMAGE1_WIDTH] 0 0 [IMAGE1_HEIGHT] 0 0 cm
 /Im0 Do
 Q
 endstream
@@ -45,8 +45,8 @@ endobj
 
 25 0 obj
 <<
-    /Width 350
-    /Height 400
+    /Width [IMAGE1_WIDTH]
+    /Height [IMAGE1_HEIGHT]
 
     /ColorSpace /DeviceRGB
     /Subtype /Image
@@ -78,7 +78,7 @@ endobj
 <<
     /Type /Page
     /Parent 12 0 R
-    /MediaBox [0 0 349 400]
+    /MediaBox [0 0 [IMAGE2_WIDTH] [IMAGE2_HEIGHT]]
     /Contents 14 0 R
     /Resources
     <<
@@ -92,7 +92,7 @@ endobj
 <<>>
 stream
 q
-349 0 0 400 0 0 cm
+[IMAGE2_WIDTH] 0 0 [IMAGE2_HEIGHT] 0 0 cm
 /Im0 Do
 Q
 endstream
@@ -101,8 +101,8 @@ endobj
 
 15 0 obj
 <<
-    /Width 349
-    /Height 400
+    /Width [IMAGE2_WIDTH]
+    /Height [IMAGE2_HEIGHT]
 
     /ColorSpace /DeviceRGB
     /Subtype /Image
@@ -132,7 +132,7 @@ endobj
 <<
     /Type /Page
     /Parent 32 0 R
-    /MediaBox [0 0 300 400]
+    /MediaBox [0 0 [IMAGE3_WIDTH] [IMAGE3_HEIGHT]]
     /Contents 34 0 R
     /Resources
     <<
@@ -146,7 +146,7 @@ endobj
 <<>>
 stream
 q
-300 0 0 400 0 0 cm
+[IMAGE3_WIDTH] 0 0 [IMAGE3_HEIGHT] 0 0 cm
 /Im0 Do
 Q
 endstream
@@ -155,8 +155,8 @@ endobj
 
 35 0 obj
 <<
-    /Width 300
-    /Height 400
+    /Width [IMAGE3_WIDTH]
+    /Height [IMAGE3_HEIGHT]
 
     /ColorSpace /DeviceRGB
     /Subtype /Image
