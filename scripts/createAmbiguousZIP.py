@@ -67,46 +67,46 @@ try:
         out.write(zip3.read())
         out.write(zip4.read())
     
+    # Remove temporarily created ZIP files
+    for f in zip_paths:
+        if f != PLACEHOLDER_ZIP:
+            os.remove(f)
+
     try:
         # Modify created zip file
         with open(sys.argv[5], "r+b") as f:
             # Read file and remove contents
-            content = f.read()
+            old_content = f.read()
             f.seek(0)
             f.truncate()
 
             # Make ZIP 1 and 2 loose
             # Write contents without central directory and end of central directory from ZIP 1 and 2
-            new_content = content[:content.index(FILE_CD)]
-            new_content += content[content.index(STRUCTURE_BREAKER):find_nth_substring(content, FILE_CD, 2)]
-            new_content += content[find_nth_substring(content, FILE_HEADER, 3):]
-            f.write(new_content)
+            content = old_content[:old_content.index(FILE_CD)]
+            content += old_content[old_content.index(STRUCTURE_BREAKER):find_nth_substring(old_content, FILE_CD, 2)]
+            content += old_content[find_nth_substring(old_content, FILE_HEADER, 3):]
+            f.write(content)
 
             # Correct offsets of ZIP 3 and 4
             for i in range(2):
-                local_header_offset = find_nth_substring(new_content, FILE_HEADER, i+3)
-                start_of_cd_offset = find_nth_substring(new_content, FILE_CD, i+1)
+                local_header_offset = find_nth_substring(content, FILE_HEADER, i+3)
+                start_of_cd_offset = find_nth_substring(content, FILE_CD, i+1)
                 # Local file header offset
                 f.seek(start_of_cd_offset + 42)
                 f.write(to_hex_bytes(local_header_offset))
                 # Central directory offset
-                f.seek(find_nth_substring(new_content, END_OF_CD, i+1) + 16)
+                f.seek(find_nth_substring(content, END_OF_CD, i+1) + 16)
                 f.write(to_hex_bytes(start_of_cd_offset))
 
             # Nest ZIP 4 into comment of ZIP 3
             # Calculate comment size
-            # len(new_content) = file size
-            comment_size = len(new_content) - new_content.rindex(FILE_HEADER)
+            # len(content) = file size
+            comment_size = len(content) - content.rindex(FILE_HEADER)
             # Set comment size field in central directory of ZIP 3
-            f.seek(find_second_last(new_content, END_OF_CD) + 20)
+            f.seek(find_second_last(content, END_OF_CD) + 20)
             f.write(to_hex_bytes(comment_size))
        
     except ValueError:
         sys.exit("Error: Invalid input files")
 except FileNotFoundError:
     sys.exit("Error: One or more files could not be opened.")
-
-# Remove created ZIP files
-for f in zip_paths:
-    if f != PLACEHOLDER_ZIP:
-        os.remove(f)
