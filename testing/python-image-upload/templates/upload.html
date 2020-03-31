@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="inputFile">Choose file: </label>
+    <input type="file" name="file" id="inputFile">
+    <br>
+    <button type="submit">Submit</button>
+</form>
+{% if msg %}
+{{msg}}<br>
+{% endif %}
+{% if imagepath %}
+<a href='view?image={{imagepath}}'>Go to uploaded image</a>
+{% endif %}
+{% endblock %}

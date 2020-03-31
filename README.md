@@ -10,7 +10,7 @@ This section describes which commands have to be executed to produce the files p
 - `createAmbiguousPDF.py`
     - `Pillow==7.0.0`
 
-Run `pip install -r requirements.txt` to install all requirements at once.
+Run `pip install -r requirements.txt` to install all requirements at once. Note that `requirements.txt` also contains the requirements needed for the [testing environments](#testing-environments).
 
 The working directory for the following commands should be `scripts`.
 
@@ -79,4 +79,13 @@ python3 createAmbiguousZIP.py ../input/TXT/file1.txt ../input/TXT/file2.txt ../i
 ```
 cd testing/php-image-upload
 php -S localhost:8080
+```
+
+### Python image upload (Flask)
+
+```
+cd testing/python-image-upload
+pip install flask
+export FLASK_APP=upload.py
+flask run
 ```
