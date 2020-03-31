@@ -12,6 +12,8 @@ This section describes which commands have to be executed to produce the files p
 
 Run `pip install -r requirements.txt` to install all requirements at once.
 
+The working directory for the following commands should be `scripts`.
+
 ### Polyglots
 
 PDF-ZIP
@@ -68,4 +70,13 @@ ZIP
 
 ```
 python3 createAmbiguousZIP.py ../input/TXT/file1.txt ../input/TXT/file2.txt ../input/TXT/file3.txt ../input/TXT/file4.txt ../output/four_zips.zip
+```
+
+## Testing environments
+
+### PHP image upload
+
+```
+cd testing/php-image-upload
+php -S localhost:8080
 ```
