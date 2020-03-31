@@ -17,12 +17,12 @@
 			return;
 		}
 		
-		// Check file content so changing extension cannot bypass the check
+		// Check file content so only changing extension cannot bypass the check
 		$allowed_types = array(IMAGETYPE_JPEG, IMAGETYPE_PNG, IMAGETYPE_GIF);
 		$detected_type = exif_imagetype($_FILES['file']['tmp_name']);
 
 		if (!in_array($detected_type, $allowed_types)) {
-			echo "The selected file is no image.";
+			echo "The selected file is not an image.";
 			return;
 		}
 
