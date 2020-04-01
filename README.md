@@ -89,3 +89,11 @@ pip install flask flask-csp
 export FLASK_APP=upload.py
 flask run
 ```
+
+### Node.js image upload
+
+```
+cd testing/node-image-upload
+npm install
+node upload.js
+```
