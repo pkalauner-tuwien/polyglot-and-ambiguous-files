@@ -85,7 +85,7 @@ php -S localhost:8080
 
 ```
 cd testing/python-image-upload
-pip install flask
+pip install flask flask-csp
 export FLASK_APP=upload.py
 flask run
 ```

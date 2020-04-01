@@ -1,3 +1,6 @@
+<?php
+    include("csp_header.php");
+ ?>
 <html>
 <head>
     <title>Image Upload</title>

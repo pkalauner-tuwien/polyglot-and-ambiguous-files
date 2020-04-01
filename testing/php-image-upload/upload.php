@@ -1,3 +1,6 @@
+<?php
+    include("csp_header.php");
+ ?>
 <form action="index.php?site=upload.php" method="post" enctype="multipart/form-data">
     <label for="inputFile">Choose file: </label>
     <input type="file" name="file" id="inputFile">
