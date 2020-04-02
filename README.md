@@ -74,26 +74,54 @@ python3 createAmbiguousZIP.py ../input/TXT/file1.txt ../input/TXT/file2.txt ../i
 
 ## Testing environments
 
-### PHP image upload
+This section describes which commands have to be executed to start various applications for evaluation purposes.
+
+### Simple image upload application
+
+PHP
 
 ```
-cd testing/php-image-upload
+cd testing/php-image-upload/
 php -S localhost:8080
 ```
 
-### Python image upload (Flask)
+Python (Flask)
 
 ```
-cd testing/python-image-upload
+cd testing/python-image-upload/
 pip install flask flask-csp
 export FLASK_APP=upload.py
 flask run
 ```
 
-### Node.js image upload
+Node.js
 
 ```
-cd testing/node-image-upload
+cd testing/node-image-upload/
 npm install
 node upload.js
+```
+
+### Show contents of ZIP
+
+Java
+
+```
+cd testing/zip/
+javac Zip.java
+java Zip <ZIP-Archive>
+```
+
+Python
+
+```
+cd testing/zip/
+python3 zip.py <ZIP-Archive>
+```
+
+PHP (requires `php-zip`)
+
+```
+cd testing/zip/
+php zip.php <ZIP-Archive>
 ```
