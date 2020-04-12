@@ -22,36 +22,34 @@ def index():
 
 @app.route('/upload', methods = ['POST'])
 @csp_header()  
-def upload():  
-    if request.method == 'POST':
-        f = request.files['file']
-        
-        # Check extension
-        if not "." in f.filename:
-            return render_template("upload.html", msg="The selected file has an invalid extension.")
+def upload():
+    f = request.files['file']
+    # Check extension
+    if not "." in f.filename:
+        return render_template("upload.html", msg="The selected file has an invalid extension.")
 
-        name, ext = f.filename.rsplit(".", 1)
-        ext = ext.lower()
-        if ext not in app.config["ALLOWED_EXTENSIONS"]:
-            return render_template("upload.html", msg="The selected file has an invalid extension.")
-        
-        hashed_name = hashlib.md5(name.encode("utf-8")).hexdigest()
-        path = os.path.join(app.config["UPLOAD_DIRECTORY"], "{}.{}".format(hashed_name, ext))
+    name, ext = f.filename.rsplit(".", 1)
+    ext = ext.lower()
+    if ext not in app.config["ALLOWED_EXTENSIONS"]:
+        return render_template("upload.html", msg="The selected file has an invalid extension.")
+    
+    hashed_name = hashlib.md5(name.encode("utf-8")).hexdigest()
+    path = os.path.join(app.config["UPLOAD_DIRECTORY"], "{}.{}".format(hashed_name, ext))
 
-        # Append number if file already exists
-        id = 1
-        while os.path.isfile(path):
-            path = os.path.join(app.config["UPLOAD_DIRECTORY"], "{}_{}.{}".format(hashed_name, id, ext))
-            id += 1
+    # Append number if file already exists
+    id = 1
+    while os.path.isfile(path):
+        path = os.path.join(app.config["UPLOAD_DIRECTORY"], "{}_{}.{}".format(hashed_name, id, ext))
+        id += 1
 
-        f.save(path)
+    f.save(path)
 
-        # Check file content so only changing extension cannot bypass the check
-        if imghdr.what(path).lower() not in app.config["ALLOWED_EXTENSIONS"]:
-            os.remove(path)
-            return render_template("upload.html", msg="The selected file is not an image.")
-        
-        return render_template("upload.html", msg="Upload successful!", imagepath = path)
+    # Check file content so only changing extension cannot bypass the check
+    if imghdr.what(path).lower() not in app.config["ALLOWED_EXTENSIONS"]:
+        os.remove(path)
+        return render_template("upload.html", msg="The selected file is not an image.")
+    
+    return render_template("upload.html", msg="Upload successful!", imagepath = path)
 
 @app.route('/view')
 @csp_header()
