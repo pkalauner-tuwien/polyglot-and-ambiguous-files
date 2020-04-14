@@ -6,13 +6,13 @@ import java.io.FileNotFoundException;
 
 public class Zip {
 	public static void main(String args[]) {
-		if (args.length != 2) {
+		if (args.length != 1) {
 			System.err.println("Usage: java Zip <ZIP file>");
 			System.exit(1);
 		}
 
 		try {
-			ZipInputStream z = new ZipInputStream(new FileInputStream(args[1]));
+			ZipInputStream z = new ZipInputStream(new FileInputStream(args[0]));
 			ZipEntry e;
 			while ((e = z.getNextEntry()) != null) {
 				System.out.println(e.getName());
