@@ -25,15 +25,24 @@ try:
 
         pdf_lines = pdf.readlines()
 
+        # Add HTML comment before PDF header
         out.write(b"<!--" + pdf_lines[0])
+
+        # Add object with stream
         out.write(b"999 0 obj\n")
         out.write(b"<<>>\n")
         out.write(b"stream\n")
+
+        # Close HTML comment and write HTML content
         out.write(b"-->\n")
         out.write(html.read())
+
+        # Open HTML comment again and end stream and object
         out.write(b"<!--\n")
         out.write(b"endstream\n")
         out.write(b"endobj\n")
+
+        # Write remaining PDF document
         for cur in pdf_lines[1:]:
             out.write(cur)
 
