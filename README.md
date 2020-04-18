@@ -52,6 +52,12 @@ SVG-JS
 python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/alert.js ../output/svg_js.svg
 ```
 
+PDF-HTML
+
+```
+python3 createPDF_HTML.py ../input/PDF/hello.pdf ../input/HTML/hello.html ../output/pdf_html.html.pdf
+```
+
 ### Ambiguous files
 
 PDF (two images in one PDF)
