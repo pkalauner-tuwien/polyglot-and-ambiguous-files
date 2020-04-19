@@ -9,6 +9,8 @@ This section describes which commands have to be executed to produce the files p
 **Required libraries:**
 - `createAmbiguousPDF.py`
     - `Pillow==7.0.0`
+- `createAmbiguousGIF.py`
+    - `imageio==2.8.0`
 
 Run `pip install -r requirements.txt` to install all requirements at once. Note that `requirements.txt` also contains the requirements needed for the [testing environments](#testing-environments).
 
@@ -70,6 +72,12 @@ PDF (three images in one PDF)
 
 ```
 python3 createAmbiguousPDF.py ../input/JPEG/red.jpg ../input/JPEG/green.jpg ../input/JPEG/blue.jpg ../output/three_images.pdf
+```
+
+GIF
+
+```
+python3 createAmbiguousGIF.py ../input/JPEG/red.jpg ../input/JPEG/green.jpg ../output/two_images.gif
 ```
 
 ZIP
