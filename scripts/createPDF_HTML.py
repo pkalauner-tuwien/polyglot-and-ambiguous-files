@@ -11,7 +11,6 @@
 #####################################################
 
 import sys
-import os
 
 if len(sys.argv) != 4:
     sys.exit("Usage: python3 createPDF_HTML.py <PDF File> <HTML File> <Output file>")

@@ -11,7 +11,6 @@
 ##################################################
 
 import sys
-import os
 import binascii
 import imageio
 
