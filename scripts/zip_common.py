@@ -12,7 +12,7 @@
 #####################################################
 
 import binascii
-from common import find_nth_substring, to_hex_bytes
+from common import find_nth_substring, find_second_last, to_hex_bytes
 
 FILE_CD = binascii.unhexlify("504b0102")
 FILE_HEADER = binascii.unhexlify("504b0304")
