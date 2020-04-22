@@ -13,21 +13,7 @@
 #####################################################
 
 import sys
-import binascii
-
-
-FILE_CD = binascii.unhexlify("504b0102")
-FILE_HEADER = binascii.unhexlify("504b0304")
-END_OF_CD = binascii.unhexlify("504b0506")
-
-def find_nth_substring(text, pattern, n):
-    return text.replace(pattern, b'?' * len(pattern), n-1).find(pattern)
-
-def to_hex_bytes(number):
-    number_str = format(number, 'x')
-    if len(number_str) % 2 != 0:
-        number_str = '0' + number_str
-    return binascii.unhexlify(number_str)[::-1]
+import zip_common
 
 if len(sys.argv) != 4:
     sys.exit("Usage: python3 createPDF_HTML.py <PDF File> <ZIP File> <Output file>")
@@ -61,25 +47,7 @@ try:
         out.write(pdf_content[trailer_pos:])
 
     # Fix zip offsets
-    with open(sys.argv[3], 'r+b') as f:
-        content = f.read()
-
-        count = 1
-        lfh_pos = find_nth_substring(content, FILE_HEADER, count)
-        cd_pos = find_nth_substring(content, FILE_CD, count)
-
-        # Central directory offset
-        f.seek(find_nth_substring(content, END_OF_CD, 1) + 16)
-        f.write(to_hex_bytes(cd_pos))
-
-        while lfh_pos >= 0 and cd_pos >= 0:
-            # Local file header offset
-            f.seek(cd_pos + 42)
-            f.write(to_hex_bytes(lfh_pos))
-
-            count += 1
-            lfh_pos = find_nth_substring(content, FILE_HEADER, count)
-            cd_pos = find_nth_substring(content, FILE_CD, count)
+    zip_common.fix_zip_offsets(sys.argv[3])
         
 except FileNotFoundError:
     sys.exit("Error: One or more files could not be opened.")

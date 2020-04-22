@@ -14,29 +14,12 @@
 
 import sys
 import os
-import binascii
 import zipfile
 import tempfile
-
-def find_second_last(text, pattern):
-    return text.rindex(pattern, 0, text.rindex(pattern))
-
-def find_nth_substring(text, pattern, n):
-    return text.replace(pattern, b'?' * len(pattern), n-1).index(pattern)
-
-def to_hex_bytes(number):
-    number_str = format(number, 'x')
-    if len(number_str) % 2 != 0:
-        number_str = '0' + number_str
-    return binascii.unhexlify(number_str)[::-1]
-
+from zip_common import FILE_CD, FILE_HEADER, END_OF_CD, find_nth_substring, find_second_last, to_hex_bytes
 
 PLACEHOLDER_ZIP = os.path.join(sys.path[0], "files/placeholder.zip")
 STRUCTURE_BREAKER = b"--- STRUCTURE BREAKER ---"
-
-FILE_CD = binascii.unhexlify("504b0102")
-FILE_HEADER = binascii.unhexlify("504b0304")
-END_OF_CD = binascii.unhexlify("504b0506")
 
 if len(sys.argv) != 6:
     print("Usage: python3 createAmbiguousPDF.py <File 1> <File 2> <File 3> <File 4> <Output file>")
