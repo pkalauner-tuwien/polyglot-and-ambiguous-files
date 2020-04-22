@@ -28,6 +28,7 @@ ZIP-PDF
 
 ```
 python3 appendFile.py ../input/ZIP/txt_files.zip ../input/PDF/hello.pdf ../output/zip_pdf.pdf.zip
+python3 fixZIPOffsets.py ../output/pdf_zip.zip.pdf
 ```
 
 PDF-JAR
