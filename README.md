@@ -43,6 +43,12 @@ GIF-PHP
 python3 appendFile.py ../input/GIF/hello.gif ../input/PHP/hello.php ../output/gif_php.php.gif
 ```
 
+GIF-JS
+
+```
+python3 appendFile.py files/gif_js_template.gif ../input/JS/hello.js ../output/gif_js.js.gif
+```
+
 PDF-ZIP (nested)
 
 ```
