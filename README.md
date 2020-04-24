@@ -52,13 +52,13 @@ python3 createPDF_ZIP.py ../input/PDF/hello.pdf ../input/ZIP/txt_files.zip ../ou
 JS-JAVA
 
 ```
-python3 createJS_JAVA.py ../input/JS/alert.js ../input/JAVA/Hello.java ../output/Hello.java.html
+python3 createJS_JAVA.py ../input/JS/hello.js ../input/JAVA/Hello.java ../output/Hello.java.html
 ```
 
 SVG-JS
 
 ```
-python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/alert.js ../output/svg_js.svg
+python3 createSVG_JS.py ../input/SVG/hello.svg ../input/JS/hello.js ../output/svg_js.svg
 ```
 
 PDF-HTML

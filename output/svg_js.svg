@@ -59,6 +59,6 @@ c38 0 40 2 40 30 0 28 -2 30 -40 30 -38 0 -40 2 -40 30 0 41 34 73 71 68 29
 <path d="M3790 2376 l0 -46 46 0 45 0 -3 43 c-3 42 -3 42 -45 45 l-43 3 0 -45z"/>
 </g>
 <script>
-	alert("Hello from Javascript!");
+alert("Hello from Javascript!");
 </script>
 </svg>
