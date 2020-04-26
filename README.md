@@ -61,6 +61,12 @@ JS-JAVA
 python3 createJS_JAVA.py ../input/JS/hello.js ../input/JAVA/Hello.java ../output/Hello.java.html
 ```
 
+JPEG-JS
+
+```
+python3 createJPEG_JS.py ../input/JPEG/hello.jpg ../input/JS/hello.js ../output/jpeg_js.js.jpeg
+```
+
 SVG-JS
 
 ```
