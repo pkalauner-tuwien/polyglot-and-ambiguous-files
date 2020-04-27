@@ -67,6 +67,12 @@ JPEG-JS
 python3 createJPEG_JS.py ../input/JPEG/hello.jpg ../input/JS/hello.js ../output/jpeg_js.js.jpeg
 ```
 
+JPEG-ZIP
+
+```
+python3 createJPEG_ZIP.py ../input/JPEG/hello.jpg ../input/ZIP/txt_files.zip ../output/jpeg_zip.zip.jpeg
+```
+
 SVG-JS
 
 ```
