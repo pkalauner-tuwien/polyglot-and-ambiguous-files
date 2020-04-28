@@ -64,13 +64,13 @@ python3 createJS_JAVA.py ../input/JS/hello.js ../input/JAVA/Hello.java ../output
 JPEG-JS
 
 ```
-python3 createJPEG_JS.py ../input/JPEG/hello.jpg ../input/JS/hello.js ../output/jpeg_js.js.jpeg
+python3 createJPEG_JS.py ../input/JPEG/hello.jpg ../input/JS/hello.js ../output/jpeg_js.js.jpg
 ```
 
 JPEG-ZIP
 
 ```
-python3 createJPEG_ZIP.py ../input/JPEG/hello.jpg ../input/ZIP/txt_files.zip ../output/jpeg_zip.zip.jpeg
+python3 createJPEG_ZIP.py ../input/JPEG/hello.jpg ../input/ZIP/txt_files.zip ../output/jpeg_zip.zip.jpg
 ```
 
 SVG-JS
