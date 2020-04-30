@@ -73,6 +73,12 @@ JPEG-ZIP
 python3 createJPEG_ZIP.py ../input/JPEG/hello.jpg ../input/ZIP/txt_files.zip ../output/jpeg_zip.zip.jpg
 ```
 
+JPEG-PDF
+
+```
+python3 createJPEG_PDF.py ../input/JPEG/hello.jpg ../input/PDF/hello.pdf ../output/jpeg_pdf.pdf.jpg
+```
+
 SVG-JS
 
 ```
