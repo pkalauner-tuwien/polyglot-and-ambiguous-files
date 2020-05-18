@@ -6,7 +6,7 @@ This repository contains various polyglot and ambiguous files created as part of
 
 This section describes which commands have to be executed to produce the files present in the `output` directory.
 
-**Required libraries:**
+**Required Python modules:**
 - `createAmbiguousPDF.py`
     - `Pillow==7.0.0`
 - `createAmbiguousGIF.py`
