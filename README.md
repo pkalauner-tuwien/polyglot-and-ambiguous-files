@@ -1,6 +1,7 @@
-# Polyglot and ambiguous files
+# Polyglot and Ambiguous Files
 
-This repository contains various polyglot and ambiguous files created as part of my bachelor's thesis.
+This repository contains various polyglot and ambiguous files created as part of my bachelor's thesis.  
+Also see [CheckResearch/PolyglotandAmbiguousFiles_Experiment_01](https://github.com/CheckResearch/PolyglotandAmbiguousFiles_Experiment_01) for more details and results.
 
 ## Usage
 
